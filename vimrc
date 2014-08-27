@@ -29,16 +29,17 @@ set rtp+=/home/zk8xmsb/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'fholgado/minibufexpl.vim'
-Plugin 'garbas/vim-snipmate'
+" Plugin 'garbas/vim-snipmate'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'kien/ctrlp.vim'
+Plugin 'honza/vim-snippets'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'MarcWeber/vim-addon-mw-utils.git'
 Plugin 'rking/ag.vim'
 Plugin 'rstacruz/sparkup'
 Plugin 'scrooloose/nerdtree'
-" Plugin 'SirVer/ultisnips'
+Plugin 'SirVer/ultisnips'
 Plugin 'taiansu/nerdtree-ag'
 Plugin 'tmhedberg/matchit'
 Plugin 'tomtom/tcomment_vim'
@@ -48,6 +49,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-scripts/a.vim'
+Plugin 'vim-scripts/STL-Syntax'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'michaeljsmith/vim-indent-object'
@@ -149,10 +151,27 @@ if executable('ag')
     let g:grep_cmd_opts = '--line-numbers -noheading'
 endif
 
-"
-"
 " =========================================================================
 " vim-lawrencium
 cabbrev hb Hgblame
 cabbrev ht Hgstatus
 cabbrev hd Hgdiff
+
+" =========================================================================
+" ultisnips
+" Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-space>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+" let g:UltiSnipsEditSplit="vertical"
+
+" =========================================================================
+" gnu global
+let GtagsCscope_Auto_Load = 1
+let GtagsCscope_Auto_Map = 1
+let GtagsCscope_Quiet = 1
+set cscopetag
+
